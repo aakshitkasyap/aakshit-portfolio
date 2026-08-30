@@ -13,10 +13,17 @@
 <body>
   <div class="ambient ambient-one"></div>
   <div class="ambient ambient-two"></div>
+  <aside class="floating-socials" aria-label="Social and contact links">
+    <a href="https://www.linkedin.com/in/aakshit-kasyap-607929384/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><span>in</span></a>
+    <a href="https://github.com/aakshitkashyap" target="_blank" rel="noreferrer" aria-label="GitHub"><span>GH</span></a>
+    <a href="mailto:aakshitkasyap@gmail.com" aria-label="Email"><span>@</span></a>
+    <a href="tel:+918628975362" aria-label="Phone"><span>☎</span></a>
+  </aside>
+
 
   <header class="nav-wrap">
     <nav class="nav">
-      <a class="brand" href="#home">AK<span>.</span></a>
+      <a class="brand brand-mark" href="#home" aria-label="Aakshit Kashyap"><span class="brand-letters">AK</span><span class="brand-dot">.</span><span class="name-popover">AAKSHIT KASHYAP</span></a>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -84,7 +91,7 @@
         <div class="about-side reveal">
           <div class="stat"><strong>4.04</strong><span>Current CGPA</span></div>
           <div class="stat"><strong>150+</strong><span>Coding problems solved</span></div>
-          <div class="stat"><strong>Top 10</strong><span>College hackathon result</span></div>
+          <div class="stat"><strong>Hackathon</strong><span>College hackathon participant</span></div>
         </div>
       </div>
     </section>
@@ -116,8 +123,8 @@
 
     <section class="section projects" id="projects">
       <div class="section-heading reveal">
-        <p class="eyebrow"><span></span> 03 · FEATURED PROJECT</p>
-        <h2>Something I’ve<br><em>built.</em></h2>
+        <p class="eyebrow"><span></span> 03 · RESEARCH HIGHLIGHT</p>
+        <h2>Something I’ve<br><em>explored.</em></h2>
       </div>
 
       <article class="project-card reveal">
@@ -130,7 +137,14 @@
             Sensor readings are served through an ESP32-hosted local web server
             and displayed through a browser-based interface.
           </p>
-          <div class="chips"><span>ESP32</span><span>MQ Sensors</span><span>Wi-Fi</span><span>HTML</span></div>
+          <div class="chips project-tech-chips">
+            <button class="tech-chip" data-tech="esp32">ESP32</button>
+            <button class="tech-chip" data-tech="mq3">MQ-3</button>
+            <button class="tech-chip" data-tech="mq6">MQ-6</button>
+            <button class="tech-chip" data-tech="mq135">MQ-135</button>
+            <button class="tech-chip" data-tech="wifi">Wi-Fi</button>
+            <button class="tech-chip" data-tech="html">HTML</button>
+          </div>
         </div>
         <div class="project-visual">
           <div class="sensor-board">
@@ -145,9 +159,39 @@
       </article>
     </section>
 
+    <section class="section research" id="research">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span></span> 04 · RESEARCH & ACADEMIC WORK</p>
+        <h2>Exploring ideas.<br><em>Understanding systems.</em></h2>
+      </div>
+      <div class="research-grid">
+        <article class="research-card reveal">
+          <div class="research-number">01</div>
+          <p class="project-type">IOT · EMBEDDED · RESEARCH</p>
+          <h3>Gas Sensor Monitoring System</h3>
+          <p>Academic research exploring an ESP32-based multi-gas monitoring concept, MQ-series sensors, Wi-Fi communication and browser-based telemetry.</p>
+          <div class="chips"><span>ESP32</span><span>MQ Sensors</span><span>Wi-Fi</span></div>
+        </article>
+        <article class="research-card reveal">
+          <div class="research-number">02</div>
+          <p class="project-type">PHYSICS · SENSING · RESEARCH</p>
+          <h3>Optical Fiber as Temperature Sensor</h3>
+          <p>Academic research into distributed temperature sensing and the use of optical fiber for temperature monitoring applications.</p>
+          <div class="chips"><span>Optical Fiber</span><span>Temperature Sensing</span></div>
+        </article>
+        <article class="research-card reveal">
+          <div class="research-number">03</div>
+          <p class="project-type">SOFTWARE ENGINEERING · ACADEMIC</p>
+          <h3>Video Streaming Platform</h3>
+          <p>Academic software-engineering work covering requirements analysis, SRS documentation and test-case design for a video streaming platform.</p>
+          <div class="chips"><span>SRS</span><span>Requirements</span><span>Testing</span></div>
+        </article>
+      </div>
+    </section>
+
     <section class="section timeline-section" id="experience">
       <div class="section-heading centered reveal">
-        <p class="eyebrow"><span></span> 04 · EXPERIENCE</p>
+        <p class="eyebrow"><span></span> 05 · EXPERIENCE</p>
         <h2>Learning by <em>doing.</em></h2>
       </div>
       <div class="timeline reveal">
@@ -167,20 +211,20 @@
     <section class="section achievements">
       <div class="achievement-grid">
         <div class="section-heading reveal">
-          <p class="eyebrow"><span></span> 05 · HIGHLIGHTS</p>
+          <p class="eyebrow"><span></span> 06 · HIGHLIGHTS</p>
           <h2>Progress worth<br><em>showing.</em></h2>
         </div>
         <div class="achievement-list reveal">
           <div><strong>150+</strong><span>Programming problems solved on online coding platforms</span></div>
           <div><strong>100 Days</strong><span>LeetCode consistency badge</span></div>
-          <div><strong>Top 10</strong><span>Among 50+ teams in a college hackathon</span></div>
+          <div><strong>Participant</strong><span>Participated in a college hackathon</span></div>
         </div>
       </div>
     </section>
 
     <section class="section education" id="education">
       <div class="section-heading reveal">
-        <p class="eyebrow"><span></span> 06 · EDUCATION</p>
+        <p class="eyebrow"><span></span> 07 · EDUCATION</p>
         <h2>Where I'm <em>learning.</em></h2>
       </div>
       <div class="education-card reveal">
@@ -203,7 +247,7 @@
 
     <section class="section certificates">
       <div class="section-heading centered reveal">
-        <p class="eyebrow"><span></span> 07 · CERTIFICATIONS</p>
+        <p class="eyebrow"><span></span> 08 · CERTIFICATIONS</p>
         <h2>Always <em>learning.</em></h2>
       </div>
       <div class="certificate-grid">
@@ -217,7 +261,7 @@
 
     <section class="section contact" id="contact">
       <div class="contact-box reveal">
-        <p class="eyebrow"><span></span> 08 · CONTACT</p>
+        <p class="eyebrow"><span></span> 09 · CONTACT</p>
         <h2>Let's build<br><em>something.</em></h2>
         <p>If you'd like to connect, collaborate, or talk about technology, feel free to reach out.</p>
         <a class="email-link" href="mailto:aakshitkasyap@gmail.com">aakshitkasyap@gmail.com <span>↗</span></a><br><a class="phone-link" href="tel:+918628975362">+91 86289 75362 <span>↗</span></a>
@@ -229,7 +273,22 @@
     </section>
   </main>
 
-  <div class="cert-modal" id="certModal" aria-hidden="true"><div class="cert-backdrop" data-close-cert></div><div class="cert-dialog" role="dialog" aria-modal="true"><button class="cert-close" data-close-cert>×</button><div class="cert-art" id="certArt"></div><div class="cert-content"><p class="project-type" id="certProvider"></p><h3 id="certTitle"></h3><p id="certDescription"></p><div class="chips" id="certTags"></div></div></div></div>
+  <div class="cert-modal" id="certModal" aria-hidden="true">
+    <div class="cert-backdrop" data-close-cert></div>
+    <div class="cert-dialog" role="dialog" aria-modal="true" aria-labelledby="certTitle">
+      <button class="cert-close" data-close-cert aria-label="Close">×</button>
+      <div class="cert-art" id="certArt"></div>
+      <div class="cert-content"><p class="project-type" id="certProvider"></p><h3 id="certTitle"></h3><p id="certDescription"></p><div class="chips" id="certTags"></div></div>
+    </div>
+  </div>
+  <div class="info-modal" id="techModal" aria-hidden="true">
+    <div class="cert-backdrop" data-close-tech></div>
+    <div class="info-dialog" role="dialog" aria-modal="true" aria-labelledby="techTitle">
+      <button class="cert-close" data-close-tech aria-label="Close">×</button>
+      <div class="info-icon" id="techIcon"></div>
+      <div class="info-content"><p class="project-type" id="techLabel"></p><h3 id="techTitle"></h3><p id="techDescription"></p><div class="chips" id="techTags"></div></div>
+    </div>
+  </div>
 
   <footer>
     <span>AAKSHIT KASHYAP</span>
