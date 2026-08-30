@@ -3,7 +3,7 @@
 window.addEventListener('load', () => {
   const loader = document.getElementById('pageLoader');
   if (!loader) return;
-  setTimeout(() => loader.classList.add('done'), 650);
+  setTimeout(() => loader.classList.add('done'), 2300);
 });
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
