@@ -45,3 +45,15 @@ nav a.active,.nav a.active{color:#16d9ff!important;text-shadow:0 0 14px rgba(22,
 .learning{padding-top:78px !important;}
 .learning .section-heading{margin-bottom:52px !important;}
 @media(max-width:600px){.learning{padding-top:62px !important;}.learning .section-heading{margin-bottom:38px !important;}}
+
+/* Definitive Currently Learning spacing fix */
+#learning > .section-heading {
+  margin-top: 0 !important;
+  margin-bottom: 82px !important;
+}
+#learning > .learning-grid {
+  margin-top: 0 !important;
+}
+@media (max-width: 600px) {
+  #learning > .section-heading { margin-bottom: 58px !important; }
+}
