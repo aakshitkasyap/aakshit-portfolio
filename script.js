@@ -57,3 +57,36 @@ let mx=-100,my=-100,x=-100,y=-100,rx=-100,ry=-100;
 window.addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;});
 function tick(){x+=(mx-x)*.20;y+=(my-y)*.20;rx+=(mx-rx)*.08;ry+=(my-ry)*.08;cursor.style.transform=`translate3d(${x}px,${y}px,0)`;cursorRing.style.transform=`translate3d(${rx}px,${ry}px,0)`;requestAnimationFrame(tick);} tick();
 document.querySelectorAll('a,button,.certificate,.research-card').forEach(el=>{el.addEventListener('mouseenter',()=>{cursor.classList.add('cursor-hover');cursorRing.classList.add('cursor-hover');});el.addEventListener('mouseleave',()=>{cursor.classList.remove('cursor-hover');cursorRing.classList.remove('cursor-hover');});});
+
+// Final polish: active navigation based on the visible section.
+const navLinks = [...document.querySelectorAll('nav a[href^="#"], .nav a[href^="#"]')];
+const sections = [...document.querySelectorAll('section[id]')];
+if (navLinks.length && sections.length && 'IntersectionObserver' in window) {
+  const navObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id));
+      }
+    });
+  }, {rootMargin:'-35% 0px -55% 0px', threshold:0});
+  sections.forEach(s => navObserver.observe(s));
+}
+
+const researchData = {
+  gas:{type:'RESEARCH / ACADEMIC',title:'Gas Sensor Monitoring System',description:'A virtual academic implementation exploring ESP32, MQ-series gas sensors and Wi-Fi connectivity for monitoring sensor readings.',tags:['ESP32','MQ-3','MQ-6','MQ-135','Wi-Fi']},
+  fiber:{type:'RESEARCH / ACADEMIC',title:'Optical Fiber as Temperature Sensor',description:'Academic research into optical-fiber temperature sensing and distributed sensing applications.',tags:['Optical Fiber','Temperature Sensing','Distributed Sensing']},
+  stream:{type:'ACADEMIC SOFTWARE WORK',title:'Video Streaming Platform',description:'Software engineering work covering requirements analysis, SRS documentation and test-case design for a video streaming platform.',tags:['SRS','Requirements','Testing']}
+};
+const rm=document.getElementById('researchModal');
+if(rm){
+ const rt=document.getElementById('researchTitle'), rd=document.getElementById('researchDescription'), rtype=document.getElementById('researchType'), rtags=document.getElementById('researchTags');
+ document.querySelectorAll('.research-card[data-research]').forEach(card=>card.addEventListener('click',()=>{
+   const d=researchData[card.dataset.research]; rtype.textContent=d.type;rt.textContent=d.title;rd.textContent=d.description;rtags.innerHTML=d.tags.map(x=>`<span>${x}</span>`).join('');
+   rm.classList.add('open');rm.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
+ }));
+ const close=()=>{rm.classList.remove('open');rm.setAttribute('aria-hidden','true');document.body.style.overflow=''};
+ document.querySelectorAll('[data-close-research]').forEach(x=>x.addEventListener('click',close));
+}
+
+// Make the floating social controls keyboard/touch friendly.
+document.querySelectorAll('.floating-socials a').forEach(a=>a.setAttribute('target','_blank'));

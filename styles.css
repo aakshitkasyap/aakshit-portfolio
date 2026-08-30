@@ -29,14 +29,15 @@
 @media(max-width:900px){.learning-grid{grid-template-columns:repeat(2,1fr)}.social-float{left:12px;bottom:14px}}@media(max-width:600px){.learning-grid{grid-template-columns:1fr}.social-float{flex-direction:row;left:50%;bottom:12px;transform:translateX(-50%)}.social-float a{width:34px;height:34px}}
 
 .social-float a::before{content:attr(aria-label);position:absolute;left:calc(100% + 10px);top:50%;transform:translateY(-50%) translateX(-4px);opacity:0;pointer-events:none;white-space:nowrap;padding:6px 8px;border:1px solid rgba(22,217,255,.2);border-radius:8px;background:rgba(5,10,13,.92);color:#cceff5;font-size:9px;font-weight:600;letter-spacing:.08em;transition:.2s ease}.social-float a:hover::before{opacity:1;transform:translateY(-50%) translateX(0)}@media(max-width:600px){.social-float a::before{display:none}}
-/* Learning section spacing polish */
-.learning{padding-top:48px}
-@media(max-width:600px){.learning{padding-top:42px}}
-/* Final explicit positioning: bring the Currently Learning heading closer to the Highlights content above. */
-.learning{position:relative;margin-top:-85px;padding-top:20px}
-.learning .section-heading{transform:translateY(-6px)}
-@media(max-width:600px){.learning{margin-top:-55px;padding-top:18px}.learning .section-heading{transform:translateY(-3px)}}
-/* Final learning-section spacing: lift the heading without letting it crowd the cards. */
-.learning{margin-top:-45px!important;padding-top:20px!important}
-.learning .section-heading{transform:translateY(-4px);margin-bottom:48px}
-@media(max-width:600px){.learning{margin-top:-28px!important;padding-top:18px!important}.learning .section-heading{transform:none;margin-bottom:34px}}
+
+/* Final polish: research cards, resume CTA, responsive/mobile behavior */
+.research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.research-card{position:relative;padding:28px;border:1px solid #18343d;border-radius:20px;background:linear-gradient(145deg,#080d10,#05080a);transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;overflow:hidden}
+.research-card:hover{transform:translateY(-7px) perspective(800px) rotateX(1deg);border-color:#16d9ff;box-shadow:0 18px 55px rgba(0,0,0,.35),0 0 35px rgba(22,217,255,.08)}
+.research-card>span{font-size:10px;color:#5c8a96;letter-spacing:.15em}.research-card h3{font-size:23px;line-height:1.1;margin:18px 0 12px}.research-card p{color:#82949d;line-height:1.6}.research-card button{margin-top:18px;border:0;background:none;color:#16d9ff;cursor:pointer;padding:0;font:inherit}
+.mini-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}.mini-tags b{font-size:10px;font-weight:500;color:#9db0b8;border:1px solid #1a3037;border-radius:999px;padding:6px 9px}
+.hero-actions .btn.primary{display:inline-flex;align-items:center;justify-content:center}
+@media(max-width:850px){.research-grid{grid-template-columns:1fr}.research-card{padding:24px}}
+@media(max-width:600px){.hero-actions{flex-direction:column;align-items:stretch}.hero-actions .btn{width:100%}.research-section{padding-top:50px}.research-card:hover{transform:translateY(-3px)}.cert-dialog{width:94vw;max-height:88vh;overflow:auto}.cert-art{min-height:210px}.cert-content{padding:28px 22px}.cert-content h3{font-size:30px}.cert-content>p:not(.project-type){font-size:14px}.floating-socials{transform:scale(.9);transform-origin:left bottom}}
+
+nav a.active,.nav a.active{color:#16d9ff!important;text-shadow:0 0 14px rgba(22,217,255,.45)}
