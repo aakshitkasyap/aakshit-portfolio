@@ -29,3 +29,6 @@
 @media(max-width:900px){.learning-grid{grid-template-columns:repeat(2,1fr)}.social-float{left:12px;bottom:14px}}@media(max-width:600px){.learning-grid{grid-template-columns:1fr}.social-float{flex-direction:row;left:50%;bottom:12px;transform:translateX(-50%)}.social-float a{width:34px;height:34px}}
 
 .social-float a::before{content:attr(aria-label);position:absolute;left:calc(100% + 10px);top:50%;transform:translateY(-50%) translateX(-4px);opacity:0;pointer-events:none;white-space:nowrap;padding:6px 8px;border:1px solid rgba(22,217,255,.2);border-radius:8px;background:rgba(5,10,13,.92);color:#cceff5;font-size:9px;font-weight:600;letter-spacing:.08em;transition:.2s ease}.social-float a:hover::before{opacity:1;transform:translateY(-50%) translateX(0)}@media(max-width:600px){.social-float a::before{display:none}}
+/* Learning section spacing polish */
+.learning{padding-top:92px}
+@media(max-width:600px){.learning{padding-top:78px}}
