@@ -36,3 +36,7 @@
 .learning{position:relative;margin-top:-85px;padding-top:20px}
 .learning .section-heading{transform:translateY(-6px)}
 @media(max-width:600px){.learning{margin-top:-55px;padding-top:18px}.learning .section-heading{transform:translateY(-3px)}}
+/* Final learning-section spacing: lift the heading without letting it crowd the cards. */
+.learning{margin-top:-45px!important;padding-top:20px!important}
+.learning .section-heading{transform:translateY(-4px);margin-bottom:48px}
+@media(max-width:600px){.learning{margin-top:-28px!important;padding-top:18px!important}.learning .section-heading{transform:none;margin-bottom:34px}}
