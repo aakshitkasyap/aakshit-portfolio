@@ -1,3 +1,10 @@
+
+// Intro loader: keep it brief and never block the page unnecessarily.
+window.addEventListener('load', () => {
+  const loader = document.getElementById('pageLoader');
+  if (!loader) return;
+  setTimeout(() => loader.classList.add('done'), 650);
+});
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
