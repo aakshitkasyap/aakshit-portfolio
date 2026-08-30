@@ -32,3 +32,7 @@
 /* Learning section spacing polish */
 .learning{padding-top:48px}
 @media(max-width:600px){.learning{padding-top:42px}}
+/* Final explicit positioning: bring the Currently Learning heading closer to the Highlights content above. */
+.learning{position:relative;margin-top:-85px;padding-top:20px}
+.learning .section-heading{transform:translateY(-6px)}
+@media(max-width:600px){.learning{margin-top:-55px;padding-top:18px}.learning .section-heading{transform:translateY(-3px)}}
