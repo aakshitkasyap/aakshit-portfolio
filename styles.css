@@ -41,3 +41,7 @@
 @media(max-width:600px){.hero-actions{flex-direction:column;align-items:stretch}.hero-actions .btn{width:100%}.research-section{padding-top:50px}.research-card:hover{transform:translateY(-3px)}.cert-dialog{width:94vw;max-height:88vh;overflow:auto}.cert-art{min-height:210px}.cert-content{padding:28px 22px}.cert-content h3{font-size:30px}.cert-content>p:not(.project-type){font-size:14px}.floating-socials{transform:scale(.9);transform-origin:left bottom}}
 
 nav a.active,.nav a.active{color:#16d9ff!important;text-shadow:0 0 14px rgba(22,217,255,.45)}
+/* FINAL: Currently Learning spacing */
+.learning{padding-top:78px !important;}
+.learning .section-heading{margin-bottom:52px !important;}
+@media(max-width:600px){.learning{padding-top:62px !important;}.learning .section-heading{margin-bottom:38px !important;}}
