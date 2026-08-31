@@ -57,3 +57,18 @@ nav a.active,.nav a.active{color:#16d9ff!important;text-shadow:0 0 14px rgba(22,
 @media (max-width: 600px) {
   #learning > .section-heading { margin-bottom: 58px !important; }
 }
+
+/* Mobile nav: hamburger toggle */
+.nav-toggle{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:36px;height:36px;border:1px solid #21323c;border-radius:10px;background:transparent;cursor:pointer;padding:0;flex-shrink:0}
+.nav-toggle span{display:block;width:16px;height:1.5px;background:#dce5eb;transition:transform .25s ease,opacity .25s ease}
+.nav-toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-toggle.open span:nth-child(2){opacity:0}
+.nav-toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+@media(max-width:900px){
+  .nav-toggle{display:flex}
+  .nav-links{display:flex;position:fixed;top:76px;left:4vw;right:4vw;flex-direction:column;gap:0;background:rgba(5,7,10,.96);backdrop-filter:blur(18px);border:1px solid #18232b;border-radius:16px;padding:0 14px;max-height:0;overflow:hidden;opacity:0;pointer-events:none;transition:max-height .35s ease,opacity .25s ease,padding .35s ease}
+  .nav-links.open{max-height:420px;opacity:1;pointer-events:auto;padding:10px 14px}
+  .nav-links a{padding:14px 4px;border-bottom:1px solid #16232b;font-size:13px}
+  .nav-links a:last-child{border-bottom:0}
+  .nav-cta{display:none}
+}

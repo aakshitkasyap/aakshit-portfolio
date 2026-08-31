@@ -23,6 +23,20 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
+// Mobile nav: hamburger toggle
+const navToggle = document.getElementById('navToggle');
+const navLinksEl = document.getElementById('navLinks');
+if (navToggle && navLinksEl) {
+  const setNavOpen = (open) => {
+    navLinksEl.classList.toggle('open', open);
+    navToggle.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+  };
+  navToggle.addEventListener('click', () => setNavOpen(!navLinksEl.classList.contains('open')));
+  navLinksEl.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setNavOpen(false)));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setNavOpen(false); });
+}
+
 const certData = {
   python:{provider:'SAYLOR · CERTIFICATION',title:'Python for Data Science',description:'A certification focused on Python concepts and programming techniques used in data science and analysis.',symbol:'Py',label:'PYTHON · DATA · ANALYSIS',tags:['Python','Data Science','Programming']},
   cpp:{provider:'SAYLOR · CERTIFICATION',title:'C++ Programming',description:'A programming certification centered on C++ fundamentals, programming concepts and object-oriented problem solving.',symbol:'C++',label:'C++ · OOP · PROBLEM SOLVING',tags:['C++','OOP','Programming']},
